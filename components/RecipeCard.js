@@ -7,13 +7,20 @@ import {
   ContentInfo,
   ContentActions,
 } from "./RecipeCardStyles";
+import Image from "next/image";
 
 const RecipeCard = ({ recipe }) => {
   const { title, slug, cookingTime, thumbnail } = recipe.fields;
 
   return (
     <Card>
-      <CardFeatured></CardFeatured>
+      <CardFeatured>
+        <Image
+          src={`https:${thumbnail.fields.file.url}`}
+          width={thumbnail.fields.file.details.image.width}
+          height={thumbnail.fields.file.details.image.height}
+        />
+      </CardFeatured>
       <CardContent>
         <ContentInfo>
           {title}
