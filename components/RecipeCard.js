@@ -23,7 +23,7 @@ const RecipeCard = ({ recipe }) => {
       </CardFeatured>
       <CardContent>
         <ContentInfo>
-          {title}
+          <h4>{title}</h4>
           <InfoParagraph>
             Takes approx: {cookingTime} mins to make
           </InfoParagraph>
